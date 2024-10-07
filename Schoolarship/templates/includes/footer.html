@@ -1,0 +1,40 @@
+<footer class="footer">
+    <div class="footer-container">
+        
+        <!-- Section Liens utiles -->
+        <div class="footer-section">
+            <h3>Liens utiles</h3>
+            <ul>
+                <li>
+                    <a href="https://uv.bf/" target="_blank" class="footer-link">Université Virtuelle du Burkina Faso</a>
+                </li>
+                <li>
+                    <a href="https://citadel.bf/" target="_blank" class="footer-link">CITADEL</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Section Contacts -->
+        <div class="footer-section">
+            <h3>Contacts</h3>
+            <ul>
+                <li>
+                    <img src="{{ url_for('static', filename='images/email.jpeg') }}" alt="Email" class="footer-icon">
+                    <a href="mailto:fiarmalandrysomeda@gmail.com" class="footer-link">fiarmalandrysomeda@gmail.com</a>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/whatsapp.jpeg') }}" alt="WhatsApp" class="footer-icon">
+                    <a href="https://wa.me/22667489187" target="_blank" class="footer-link">+226 67 48 91 87</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright">
+        <p>&copy; {{ current_year }} Bachelor's Degree 3 in Software Engineering Option Data Analysis.</p>
+    </div>
+</footer>
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">

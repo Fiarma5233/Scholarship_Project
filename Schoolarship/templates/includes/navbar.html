@@ -1,0 +1,108 @@
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/design.jpg') }}" alt="Formation" class="bourse-image">
+        </div>
+        <div class="navbar-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar-menu">
+            <li class="navbar-item"><a href="/" class="navbar-links">Opportunities</a></li>
+            <li class="navbar-item"><a href="/bourses" class="navbar-links">Bourses</a></li>
+            <li class="navbar-item"><a href="/stages" class="navbar-links">Stages</a></li>
+            <li class="navbar-item"><a href="/formations" class="navbar-links">Formations</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Style CSS intégré -->
+<style>
+    /* Style de la navbar */
+    .navbar {
+        background-color: #007bff;
+        padding: 10px 20px;
+        position: relative;
+    }
+
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Style du logo et de l'image */
+    .logo img {
+        height: 50px; /* Ajuste la hauteur de l'image */
+        width: auto; /* Maintient le ratio de l'image */
+        border-radius: 5px; /* Coins arrondis si nécessaire */
+    }
+
+    .navbar-menu {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    .navbar-item {
+        margin: 0;
+    }
+
+    .navbar-links {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .navbar-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .bar {
+        height: 3px;
+        width: 25px;
+        background-color: white;
+        margin: 3px 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .navbar-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background-color: #007bff;
+            z-index: 1;
+        }
+
+        .navbar-menu.active {
+            display: flex;
+        }
+
+        .navbar-toggle {
+            display: flex;
+        }
+
+        .logo img {
+            height: 40px; /* Taille plus petite pour les écrans mobiles */
+        }
+    }
+</style>
+
+<!-- Script pour le toggle de la navbar -->
+<script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navbarMenu = document.querySelector('.navbar-menu');
+
+    mobileMenu.addEventListener('click', () => {
+        navbarMenu.classList.toggle('active');
+    });
+</script>

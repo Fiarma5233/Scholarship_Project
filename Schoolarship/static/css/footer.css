@@ -1,0 +1,82 @@
+/* %%%%%%%%%%% */
+
+* {
+    box-sizing: border-box;
+    /* Appliquer border-box à tous les éléments */
+    margin: 0;
+    /* Retirer les marges par défaut */
+    padding: 0;
+    /* Retirer le padding par défaut */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0; 
+    width: 100%;
+    /* Assurez-vous que le footer prenne 100% de la largeur */
+   
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    /* Espacement uniforme entre les sections */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* Permet aux sections de se réorganiser sur plusieurs lignes */
+    max-width: 1200px;
+    /* Optionnel : pour limiter la largeur du contenu à un maximum */
+    margin: 0;
+    /* Centre le footer si la largeur maximale est utilisée */
+    padding: 0 20px;
+    /* Espacement latéral */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    /* Largeur minimale pour chaque section */
+    text-align: center;
+}
+
+.footer-section h3 {
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin: 10px 0;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    /* Taille de police légèrement plus petite */
+}
+
+/* Styles supplémentaires */
+.footer-link {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #00ff7f;
+    /* Couleur au survol */
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    /* Alignement vertical des icônes */
+    margin-right: 8px;
+    /* Espacement entre l'icône et le texte */
+}

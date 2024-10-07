@@ -1,0 +1,69 @@
+
+
+
+<!-- Formulaire de recherche -->
+<form method="GET" action="{{ request.path }}" class="search-form">
+    <input type="text" name="search" placeholder="Recherche par Pays, Titre, Niveau" required>
+    <button type="submit">Rechercher</button>
+</form>
+
+{% if messages %}
+    <div class="alert-message">{{ messages }}</div>
+{% endif %}
+
+<!-- Style CSS intégré -->
+<style>
+    .search-form {
+        display: flex; /* Utiliser flexbox pour l'alignement */
+        justify-content: center; /* Centrer horizontalement */
+        margin: 20px 0; /* Marges pour le haut et le bas */
+        gap: 10px; /* Espace entre le champ de recherche et le bouton */
+    }
+
+    .search-form input {
+        padding: 10px; /* Espacement interne pour le champ de recherche */
+        border: 1px solid #ddd; /* Bordure grise */
+        border-radius: 5px; /* Coins arrondis */
+        width: 100%; /* Prendre toute la largeur disponible */
+        max-width: 300px; /* Largeur maximale pour les grands écrans */
+        font-size: 16px; /* Taille de la police */
+    }
+
+    .search-form button {
+        padding: 10px 15px; /* Espacement interne pour le bouton */
+        border: none; /* Pas de bordure */
+        border-radius: 5px; /* Coins arrondis */
+        background-color: #007bff; /* Couleur de fond bleue */
+        color: white; /* Couleur du texte en blanc */
+        font-size: 16px; /* Taille de la police */
+        cursor: pointer; /* Changer le curseur au survol */
+        transition: background-color 0.3s; /* Transition pour le survol */
+    }
+
+    .search-form button:hover {
+        background-color: #0056b3; /* Couleur au survol */
+    }
+
+    /* Style pour le message d'alerte */
+    .alert-message {
+        margin-top: 15px; /* Marges pour espacer le message */
+        padding: 10px; /* Espacement interne */
+        border-radius: 5px; /* Coins arrondis */
+        color: rebeccapurple; /* Couleur du texte rouge foncé */
+        text-align: center; /* Centrer le texte */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 480px) {
+        .search-form {
+            flex-direction: column; /* Passer en colonne sur petits écrans */
+            align-items: center; /* Centrer les éléments */
+        }
+
+        .search-form input,
+        .search-form button {
+            width: 100%; /* Prendre toute la largeur sur petits écrans */
+            max-width: none; /* Retirer la largeur maximale */
+        }
+    }
+</style>

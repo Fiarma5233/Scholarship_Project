@@ -1,0 +1,164 @@
+2024-10-02 14:19:52,280 - INFO - Début de la tâche
+2024-10-02 14:19:52,281 - INFO - Insertion des données dans PostgreSQL...
+2024-10-02 14:19:52,545 - INFO - Tâche d'insertion des données dans PostgreSQL terminée.
+2024-10-02 14:19:52,545 - INFO - Récupération de nouvelles opportunités disponibles
+2024-10-02 14:19:52,559 - INFO - Connexion réussie à la base de données.
+2024-10-02 14:19:52,559 - INFO - Exécution de la requête pour récupérer les nouvelles opportunités...
+2024-10-02 14:19:52,565 - INFO - Récupération réussie de 104 nouvelles opportunités.
+2024-10-02 14:19:52,566 - INFO - Tâche de récupération des nouvelles opportunités terminée
+2024-10-02 14:19:52,566 - INFO - Récupération de tous les utilisateurs
+2024-10-02 14:19:52,586 - INFO - Tâche de récupération des utilisateurs terminée
+2024-10-02 14:19:52,586 - INFO - Nouvelles opportunités détectées
+2024-10-02 14:20:11,354 - ERROR - Échec de l'envoi des e-mails
+2024-10-02 14:29:21,827 - INFO - Début de la tâche
+2024-10-02 14:29:21,827 - INFO - Insertion des données dans PostgreSQL...
+2024-10-02 14:29:22,056 - INFO - Tâche d'insertion des données dans PostgreSQL terminée.
+2024-10-02 14:29:22,057 - INFO - Récupération de nouvelles opportunités disponibles
+2024-10-02 14:29:22,073 - INFO - Connexion réussie à la base de données.
+2024-10-02 14:29:22,073 - INFO - Exécution de la requête pour récupérer les nouvelles opportunités...
+2024-10-02 14:29:22,081 - INFO - Récupération réussie de 104 nouvelles opportunités.
+2024-10-02 14:29:22,082 - INFO - Tâche de récupération des nouvelles opportunités terminée
+2024-10-02 14:29:22,082 - INFO - Récupération de tous les utilisateurs
+2024-10-02 14:29:22,105 - INFO - Tâche de récupération des utilisateurs terminée
+2024-10-02 14:29:22,105 - INFO - Nouvelles opportunités détectées
+2024-10-02 14:29:22,105 - INFO - Opportunités à marquer comme envoyées : [2, 13, 3, 7, 10, 11, 12, 15, 41, 21, 38, 45, 29, 44, 33, 66, 43, 60, 67, 61, 275, 18, 19, 64, 65, 26, 27, 28, 87, 30, 68, 71, 74, 34, 36, 37, 77, 79, 88, 9, 16, 35, 40, 92, 46, 52, 55, 56, 57, 59, 62, 63, 5, 31, 93, 94, 75, 76, 1, 4, 14, 8, 6, 20, 22, 23, 24, 25, 32, 51, 53, 39, 42, 49, 78, 80, 82, 83, 54, 81, 69, 70, 84, 91, 85, 86, 101, 47, 124, 125, 126, 127, 130, 17, 128, 48, 50, 72, 73, 89, 90, 122, 123, 129]
+2024-10-02 14:29:42,288 - ERROR - Échec de l'envoi des e-mails
+2024-10-02 14:56:31,569 - INFO - Connexion réussie à la base de données.
+2024-10-02 14:56:31,569 - INFO - Exécution de la requête pour récupérer les nouvelles opportunités...
+2024-10-02 14:56:31,575 - INFO - Récupération réussie de 104 nouvelles opportunités.
+2024-10-02 14:56:31,588 - INFO - Connexion réussie à la base de données.
+2024-10-02 14:56:31,588 - INFO - Connexion à la base de données pour mise à jour des opportunités.
+2024-10-02 14:56:31,590 - ERROR - Erreur lors de la mise à jour des opportunités : relation "opportunities" does not exist
+LINE 1: UPDATE opportunities SET sent = TRUE WHERE id IN (2, 13, 3, ...
+               ^
+
+2024-10-02 14:58:26,082 - INFO - Début de la tâche
+2024-10-02 14:58:26,082 - INFO - Insertion des données dans PostgreSQL...
+2024-10-02 14:58:26,309 - INFO - Tâche d'insertion des données dans PostgreSQL terminée.
+2024-10-02 14:58:26,309 - INFO - Récupération de nouvelles opportunités disponibles
+2024-10-02 14:58:26,323 - INFO - Connexion réussie à la base de données.
+2024-10-02 14:58:26,323 - INFO - Exécution de la requête pour récupérer les nouvelles opportunités...
+2024-10-02 14:58:26,330 - INFO - Récupération réussie de 104 nouvelles opportunités.
+2024-10-02 14:58:26,330 - INFO - Tâche de récupération des nouvelles opportunités terminée
+2024-10-02 14:58:26,330 - INFO - Récupération de tous les utilisateurs
+2024-10-02 14:58:26,348 - INFO - Tâche de récupération des utilisateurs terminée
+2024-10-02 14:58:26,348 - INFO - Nouvelles opportunités détectées
+2024-10-02 14:58:26,348 - INFO - Opportunités à marquer comme envoyées : [2, 13, 3, 7, 10, 40, 11, 12, 15, 41, 21, 38, 45, 29, 44, 52, 33, 43, 60, 18, 19, 275, 64, 65, 26, 27, 28, 66, 67, 87, 30, 68, 71, 34, 36, 37, 74, 77, 79, 5, 31, 94, 75, 1, 4, 88, 14, 8, 6, 93, 20, 22, 23, 24, 25, 9, 16, 35, 92, 46, 55, 56, 32, 51, 53, 57, 59, 61, 62, 63, 39, 42, 76, 80, 49, 78, 54, 81, 82, 83, 69, 70, 84, 91, 85, 86, 101, 47, 124, 125, 126, 127, 130, 17, 128, 48, 50, 72, 73, 89, 90, 122, 123, 129]
+2024-10-02 14:58:47,942 - ERROR - Échec de l'envoi des e-mails
+2024-10-02 14:59:05,371 - INFO - Connexion réussie à la base de données.
+2024-10-02 14:59:05,371 - INFO - Exécution de la requête pour récupérer les nouvelles opportunités...
+2024-10-02 14:59:05,377 - INFO - Récupération réussie de 104 nouvelles opportunités.
+2024-10-02 14:59:05,390 - INFO - Connexion réussie à la base de données.
+2024-10-02 14:59:05,390 - INFO - Connexion à la base de données pour mise à jour des opportunités.
+2024-10-02 14:59:05,391 - ERROR - Erreur lors de la mise à jour des opportunités : relation "opportunities" does not exist
+LINE 1: UPDATE opportunities SET send = TRUE WHERE id IN (2, 13, 3, ...
+               ^
+
+2024-10-02 15:01:11,824 - INFO - Connexion réussie à la base de données.
+2024-10-02 15:01:11,824 - INFO - Exécution de la requête pour récupérer les nouvelles opportunités...
+2024-10-02 15:01:11,832 - INFO - Récupération réussie de 104 nouvelles opportunités.
+2024-10-02 15:01:11,852 - INFO - Connexion réussie à la base de données.
+2024-10-02 15:01:11,852 - INFO - Connexion à la base de données pour mise à jour des opportunités.
+2024-10-02 15:01:11,862 - INFO - 104 opportunités marquées comme envoyées.
+2024-10-02 15:02:59,122 - INFO - Début de la tâche
+2024-10-02 15:02:59,122 - INFO - Insertion des données dans PostgreSQL...
+2024-10-02 15:02:59,404 - INFO - Tâche d'insertion des données dans PostgreSQL terminée.
+2024-10-02 15:02:59,404 - INFO - Récupération de nouvelles opportunités disponibles
+2024-10-02 15:02:59,417 - INFO - Connexion réussie à la base de données.
+2024-10-02 15:02:59,417 - INFO - Exécution de la requête pour récupérer les nouvelles opportunités...
+2024-10-02 15:02:59,423 - INFO - Récupération réussie de 101 nouvelles opportunités.
+2024-10-02 15:02:59,424 - INFO - Tâche de récupération des nouvelles opportunités terminée
+2024-10-02 15:02:59,424 - INFO - Récupération de tous les utilisateurs
+2024-10-02 15:02:59,440 - INFO - Tâche de récupération des utilisateurs terminée
+2024-10-02 15:02:59,440 - INFO - Nouvelles opportunités détectées
+2024-10-02 15:02:59,440 - INFO - Opportunités à marquer comme envoyées : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 23, 12, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 40, 41, 39, 34, 35, 36, 37, 42, 43, 45, 46, 47, 44, 48, 49, 51, 52, 53, 58, 62, 64, 65, 66, 67, 68, 69, 70, 71, 90, 72, 75, 76, 79, 73, 82, 83, 91, 84, 85, 86, 87, 88, 92, 93, 14, 15, 89, 33, 38, 50, 54, 55, 57, 59, 60, 61, 63, 74, 77, 78, 80, 81, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+2024-10-02 15:03:25,341 - ERROR - Échec de l'envoi des e-mails
+2024-10-02 15:19:59,597 - INFO - Début de la tâche
+2024-10-02 15:19:59,597 - INFO - Insertion des données dans PostgreSQL...
+2024-10-02 15:19:59,823 - INFO - Tâche d'insertion des données dans PostgreSQL terminée.
+2024-10-02 15:19:59,824 - INFO - Récupération de nouvelles opportunités disponibles
+2024-10-02 15:19:59,837 - INFO - Connexion réussie à la base de données.
+2024-10-02 15:19:59,837 - INFO - Exécution de la requête pour récupérer les nouvelles opportunités...
+2024-10-02 15:19:59,844 - INFO - Récupération réussie de 101 nouvelles opportunités.
+2024-10-02 15:19:59,845 - INFO - Tâche de récupération des nouvelles opportunités terminée
+2024-10-02 15:19:59,845 - INFO - Récupération de tous les utilisateurs
+2024-10-02 15:19:59,860 - INFO - Tâche de récupération des utilisateurs terminée
+2024-10-02 15:19:59,860 - INFO - Nouvelles opportunités détectées
+2024-10-02 15:19:59,860 - INFO - Opportunités à marquer comme envoyées : [7, 8, 16, 17, 18, 19, 20, 21, 30, 40, 48, 51, 58, 62, 9, 10, 76, 79, 82, 83, 85, 92, 29, 90, 44, 1, 2, 3, 4, 5, 6, 11, 13, 22, 23, 24, 25, 26, 27, 28, 31, 32, 34, 43, 35, 36, 37, 41, 42, 45, 46, 47, 49, 52, 91, 53, 64, 65, 66, 67, 68, 69, 70, 71, 39, 72, 75, 84, 86, 87, 88, 93, 14, 15, 89, 33, 38, 50, 54, 55, 12, 57, 59, 60, 61, 63, 73, 74, 77, 78, 80, 81, 119, 120, 121, 122, 123, 124, 125, 126, 127]
+2024-10-02 15:20:19,100 - INFO - Envoi d'emails réussi
+2024-10-02 15:20:19,100 - INFO - Mise à jour des données 
+2024-10-02 15:20:19,117 - INFO - Connexion réussie à la base de données.
+2024-10-02 15:20:19,117 - INFO - Connexion à la base de données pour mise à jour des opportunités.
+2024-10-02 15:20:19,123 - INFO - 101 opportunités marquées comme envoyées.
+2024-10-02 15:20:19,124 - INFO - Mise à jour des données terminée
+2024-10-02 15:23:55,485 - INFO - Début de la tâche
+2024-10-02 15:23:55,485 - INFO - Insertion des données dans PostgreSQL...
+2024-10-02 15:23:55,762 - INFO - Tâche d'insertion des données dans PostgreSQL terminée.
+2024-10-02 15:23:55,762 - INFO - Récupération de nouvelles opportunités disponibles
+2024-10-02 15:23:55,774 - INFO - Connexion réussie à la base de données.
+2024-10-02 15:23:55,775 - INFO - Exécution de la requête pour récupérer les nouvelles opportunités...
+2024-10-02 15:23:55,776 - WARNING - Aucune nouvelle opportunité trouvée.
+2024-10-02 15:23:55,776 - INFO - Tâche de récupération des nouvelles opportunités terminée
+2024-10-02 15:23:55,777 - INFO - Récupération de tous les utilisateurs
+2024-10-02 15:23:55,791 - INFO - Tâche de récupération des utilisateurs terminée
+2024-10-02 15:23:55,791 - INFO - Aucune nouvelle opportunité à envoyer
+2024-10-02 15:52:26,691 - INFO - Début de la tâche
+2024-10-02 15:52:26,691 - INFO - Scraping des données...
+2024-10-02 15:52:26,692 - INFO - ====== WebDriver manager ======
+2024-10-02 15:52:26,766 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 15:52:26,910 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 15:52:27,080 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-02 15:52:43,898 - INFO - ====== WebDriver manager ======
+2024-10-02 15:52:43,974 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 15:52:44,104 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 15:52:44,206 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-02 15:52:49,217 - INFO - ====== WebDriver manager ======
+2024-10-02 15:52:49,291 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 15:52:49,406 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 15:52:49,522 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-02 15:52:53,503 - INFO - ====== WebDriver manager ======
+2024-10-02 15:52:53,575 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 15:52:53,678 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 15:52:53,777 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-02 15:52:59,074 - INFO - ====== WebDriver manager ======
+2024-10-02 15:52:59,146 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 15:52:59,251 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 15:52:59,382 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-02 16:01:31,983 - INFO - ====== WebDriver manager ======
+2024-10-02 16:01:32,083 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 16:01:32,197 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 16:01:32,304 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-02 16:02:14,805 - INFO - ====== WebDriver manager ======
+2024-10-02 16:02:14,878 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 16:02:14,979 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 16:02:15,079 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-02 16:04:19,479 - INFO - ====== WebDriver manager ======
+2024-10-02 16:04:19,579 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 16:04:19,699 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 16:04:19,835 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-02 16:10:45,167 - INFO - ====== WebDriver manager ======
+2024-10-02 16:10:45,270 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 16:10:45,673 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 16:10:45,792 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-02 16:11:13,819 - INFO - ====== WebDriver manager ======
+2024-10-02 16:11:13,899 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 16:11:14,009 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-02 16:11:14,116 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-02 16:13:43,368 - INFO - Tâche de Scraping des terminée.
+2024-10-02 16:13:43,368 - INFO - Insertion des données dans PostgreSQL...
+2024-10-02 16:13:43,842 - INFO - Tâche d'insertion des données dans PostgreSQL terminée.
+2024-10-02 16:13:43,842 - INFO - Récupération de nouvelles opportunités disponibles
+2024-10-02 16:13:43,855 - INFO - Connexion réussie à la base de données.
+2024-10-02 16:13:43,855 - INFO - Exécution de la requête pour récupérer les nouvelles opportunités...
+2024-10-02 16:13:43,860 - INFO - Récupération réussie de 101 nouvelles opportunités.
+2024-10-02 16:13:43,860 - INFO - Tâche de récupération des nouvelles opportunités terminée
+2024-10-02 16:13:43,860 - INFO - Récupération de tous les utilisateurs
+2024-10-02 16:13:43,874 - INFO - Tâche de récupération des utilisateurs terminée
+2024-10-02 16:13:43,874 - INFO - Nouvelles opportunités détectées
+2024-10-02 16:13:43,874 - INFO - Opportunités à marquer comme envoyées : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 23, 12, 14, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 40, 41, 39, 34, 35, 36, 37, 42, 43, 45, 46, 47, 44, 48, 49, 51, 52, 53, 58, 62, 64, 65, 66, 67, 68, 69, 70, 71, 72, 75, 76, 79, 73, 82, 83, 91, 84, 85, 86, 87, 88, 92, 94, 15, 89, 33, 38, 90, 50, 54, 55, 57, 59, 60, 61, 63, 74, 77, 78, 80, 81, 118, 119, 120, 121, 122, 123, 124, 125, 126]
+2024-10-02 16:14:04,042 - INFO - Envoi d'emails réussi
+2024-10-02 16:14:04,042 - INFO - Mise à jour des données 
+2024-10-02 16:14:04,058 - INFO - Connexion réussie à la base de données.
+2024-10-02 16:14:04,059 - INFO - Connexion à la base de données pour mise à jour des opportunités.
+2024-10-02 16:14:04,067 - INFO - 101 opportunités marquées comme envoyées.
+2024-10-02 16:14:04,067 - INFO - Mise à jour des données terminée

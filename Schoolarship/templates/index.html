@@ -1,0 +1,126 @@
+
+
+{% extends "base.html" %}
+
+<!-- Bloc pour les styles personnalisés -->
+{% block styles %}
+
+    <!-- Inclure SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <!-- Inclure le fichier CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+{% endblock styles %}
+
+
+{% block content %}
+<div class="wrapper">
+    <div class="content">
+
+                <!-- Liste de bourses -->
+        <h1>Opportunites d'etudes</h1>
+
+        <!-- Inclure le formulaire de recherche -->
+        {% include 'includes/search_form.html' %}
+
+        <!-- Affichage des bourses -->
+        <div class="bourses-container">
+            {% for bourse in opportunities %}
+                <div class="bourse-item">
+                    <!-- Image selon le type de bourse -->
+                    {% if bourse[3] == "Bourse" %}
+                        <img src="{{ url_for('static', filename='images/bourse.png') }}" alt="Bourse" class="bourse-image">
+                    {% elif bourse[3] == "Stage" %}
+                        <img src="{{ url_for('static', filename='images/stage.jpeg') }}" alt="Stage" class="bourse-image">
+                    {% elif bourse[3] == "Formation" %}
+                        <img src="{{ url_for('static', filename='images/formation.jpeg') }}" alt="Formation" class="bourse-image">
+                    {% endif %}
+                    
+                    <!-- Titre, pays, description, et bouton "Voir plus" -->
+                    <h3>{{ bourse[2] }}</h3> <!-- Titre -->
+                    <p><strong>Pays :</strong> {{ bourse[1] }}</p> <!-- Pays -->
+                    <p>{{ bourse[4][:100] }}...</p> <!-- Description abrégée -->
+                    <a href="{{ url_for('details', bourse_id=bourse[0], section='opportunites') }}" class="btn">Voir plus</a>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            {% if page > 1 %}
+                <a href="?page={{ page - 1 }}&per_page={{ per_page }}">Précédent</a>
+            {% endif %}
+
+            <span>Page {{ page }}</span>
+
+            {% if page * per_page < total %}
+                <a href="?page={{ page + 1 }}&per_page={{ per_page }}">Suivant</a>
+            {% endif %}
+        </div>
+  
+        
+
+{% endblock content %}
+
+
+
+
+
+ 
+
+ {% block scripts %}
+ <!-- Inclure SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+
+<script>
+    
+document.addEventListener('DOMContentLoaded', function() {
+    // Vérifie si l'utilisateur a déjà répondu au popup
+    if (!localStorage.getItem('popupShown')) {
+        Swal.fire({
+            title: "Souhaitez-vous recevoir des informations ?",
+            text: "Souhaitez-vous recevoir prochainement des informations sur les nouvelles opportunités disponibles ?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Oui",
+            cancelButtonText: "Non"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "/login";
+            } else {
+                localStorage.setItem('popupShown', 'true');
+            }
+        });
+    }
+
+    // Vérifier les messages de succès ou d'erreur
+    {% if message %}
+        let iconType = "{{ 'success' if not is_error else 'error' }}";
+        let titleColor = "{{ 'green' if not is_error else 'red' }}";  // Couleur selon le type
+        let backgroundColor = "{{ 'lightgreen' if not is_error else 'lightcoral' }}";  // Couleur de fond
+
+        Swal.fire({
+            title: "{{ message }}",
+            icon: iconType,
+            timer: 2000,
+            timerProgressBar: true,
+            didOpen: () => {
+                Swal.showLoading();
+            },
+            willClose: () => {
+                window.location.href = "/";
+            },
+            customClass: {
+                title: titleColor, // Appliquer la couleur du titre
+                popup: backgroundColor // Appliquer la couleur de fond
+            }
+        });
+    {% endif %}
+});
+
+</script> 
+
+{% endblock scripts %}
+

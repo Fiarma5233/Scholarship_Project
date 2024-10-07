@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+<!-- Bloc pour les styles personnalisés -->
+{% block styles %}
+    <!-- Inclure le fichier CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detail.css') }}">
+{% endblock styles %}
+
+{% block content %}
+<h1>Détails de la Bourse</h1>
+
+<div class="bourse-details">
+    <h2>{{ bourse[2] }}</h2> <!-- Titre -->
+
+    <!-- Bouton de retour en haut à droite -->
+    <a href="{{ url_for(section) }}" class="btn btn-secondary return-btn">Retour à {{ section|capitalize }}</a>
+
+    <div class="details-container">
+        <div class="description-column">
+            <h3>Description</h3>
+            <p>
+                {% if bourse[4].startswith('https://') %}
+                    <a href="{{ bourse[4] }}" target="_blank">{{ bourse[4] }}</a>
+                {% else %}
+                    {{ bourse[4] }}
+                {% endif %}
+            </p> <!-- Description -->
+        </div>
+        <div class="info-column">
+            <h3>Détails</h3>
+            <p><strong>Pays :</strong> {{ bourse[1] }}</p> <!-- Pays -->
+            <p><strong>Type :</strong> {{ bourse[3] }}</p> <!-- Type -->
+            <p><strong>Niveau :</strong> {{ bourse[5] }}</p> <!-- Niveau -->
+            
+
+            <p><strong>Date Limite :</strong> {{ bourse[7] }}</p> <!-- Date Limite -->
+
+            
+
+            <p><strong>Nombre de bourses :</strong> {{ bourse[9] }}</p> <!-- Nombre de bourses -->
+            
+            <p><strong>Domaine Concerné :</strong>
+                {% if bourse[10].startswith('https://') %}
+                    <a href="{{ bourse[10] }}" target="_blank">{{ bourse[10] }}</a>
+                {% else %}
+                    {{ bourse[10] }}
+                {% endif %}
+            </p> <!-- Domaine Concerné -->
+
+            <p><strong>Durée d'étude :</strong>
+                {% if bourse[11].startswith('https://') %}
+                    <a href="{{ bourse[11] }}" target="_blank">{{ bourse[11] }}</a>
+                {% else %}
+                    {{ bourse[11] }}
+                {% endif %}
+            </p> <!-- Durée d'étude -->
+
+            <p><strong>Pays éligibles :</strong>
+                {% if bourse[12].startswith('https://') %}
+                    <a href="{{ bourse[12] }}" target="_blank">{{ bourse[12] }}</a>
+                {% else %}
+                    {{ bourse[12] }}
+                {% endif %}
+            </p> <!-- Pays éligibles -->
+
+            <p><strong>Financement :</strong>
+                {% if bourse[6].startswith('https://') %}
+                    <a href="{{ bourse[6] }}" target="_blank">{{ bourse[6] }}</a>
+                {% else %}
+                    {{ bourse[6] }}
+                {% endif %}
+            </p> <!-- Financement -->
+
+            <p></p>
+                <strong>Conditions :</strong>
+                {% if bourse[8] is iterable and not bourse[8] is string %}
+                    {% set links = bourse[8] %}
+                    {% for lien in links[:2] %}
+                        <a href="{{ lien }}" target="_blank">{{ lien }}</a><br>
+                    {% endfor %}
+                {% else %}
+                    <a href="{{ bourse[8] }}" target="_blank">{{ bourse[8] }}</a>
+                {% endif %}
+            </p> <!-- Conditions -->
+
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+{% endblock content %}

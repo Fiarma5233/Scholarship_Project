@@ -1,0 +1,70 @@
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+
+    h1 {
+        text-align: center; /* Centrer le titre */
+        color: #333; /* Couleur du titre */
+        margin-bottom: 20px; /* Marge inférieure */
+        font-size: 2em; /* Taille du texte du titre */
+    }
+
+    .bourses-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+        gap: 20px; /* Espacement entre les éléments */
+        margin-top: 20px;
+    }
+
+    .bourse-item {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s; /* Animation pour l'effet de survol */
+    }
+
+    .bourse-item:hover {
+        transform: scale(1.05); /* Agrandir légèrement au survol */
+    }
+
+    .bourse-image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+    }
+
+    .pagination {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .pagination a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #007bff;
+    }
+
+    .pagination span {
+        font-weight: bold;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .bourses-container {
+            grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur écrans moyens */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .bourses-container {
+            grid-template-columns: 1fr; /* 1 colonne sur petits écrans */
+        }
+    }
+

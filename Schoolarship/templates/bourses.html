@@ -1,0 +1,67 @@
+
+
+{% extends "base.html" %}
+
+<!-- Bloc pour les styles personnalisés -->
+{% block styles %}
+
+    
+    <!-- Inclure le fichier CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+{% endblock styles %}
+
+
+{% block content %}
+
+
+<div class="wrapper">
+    <div class="content">
+
+                <!-- Liste de bourses -->
+        <h1>Bourses disponibles</h1>
+
+        <!-- Inclure le formulaire de recherche -->
+        {% include 'includes/search_form.html' %}
+
+        <!-- Affichage des bourses -->
+        <div class="bourses-container">
+            {% for bourse in opportunities %}
+                <div class="bourse-item">
+                   
+                        <img src="{{ url_for('static', filename='images/bourse.png') }}" alt="Bourse" class="bourse-image">
+                    
+                    
+                    <!-- Titre, pays, description, et bouton "Voir plus" -->
+                    <h3>{{ bourse[2] }}</h3> <!-- Titre -->
+                    <p><strong>Pays :</strong> {{ bourse[1] }}</p> <!-- Pays -->
+                    <p>{{ bourse[4][:100] }}...</p> <!-- Description abrégée -->
+                    <a href="{{ url_for('details', bourse_id=bourse[0], section='bourses') }}" class="btn">Voir plus</a>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            {% if page > 1 %}
+                <a href="?page={{ page - 1 }}&per_page={{ per_page }}">Précédent</a>
+            {% endif %}
+
+            <span>Page {{ page }}</span>
+
+            {% if page * per_page < total %}
+                <a href="?page={{ page + 1 }}&per_page={{ per_page }}">Suivant</a>
+            {% endif %}
+        </div>
+  
+        
+
+{% endblock content %}
+
+
+
+
+
+ 
+
+ 

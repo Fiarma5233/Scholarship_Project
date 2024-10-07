@@ -1,0 +1,44 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/image.ico') }}" type="image/x-icon">
+
+    <!-- CSS global -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Bloc pour les styles personnalisés -->
+    {% block styles %}
+    {% endblock styles %}
+
+    <title>Scholarship</title>
+</head>
+<body>
+    
+    <!-- Inclure la barre de navigation -->
+    {% block navbar %}
+        
+        {% include "includes/navbar.html" %}
+
+    {% endblock navbar %}
+    
+    <!-- Contenu principal -->
+    {% block content %}
+    {% endblock content %}
+    
+    <!-- Inclure le pied de page -->
+    {% block footer %}
+        {% include 'includes/footer.html' %}
+    {% endblock footer %}
+    
+    <!-- Bloc pour les scripts personnalisés -->
+    {% block scripts %}
+    {% endblock scripts %}
+    
+</body>
+</html>

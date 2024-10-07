@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/detail.css">
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Bonjour {{ nom }} !</h1> <!-- Salutation personnalisée -->
+
+<h2>Détails des Opportunites d'etudes Disponibles</h2>
+
+{% for opportunite in opportunites %}
+
+<br>
+<br>
+<div class="bourse-details">
+    <h3>{{ opportunite[2] }}</h3> <!-- Titre -->
+
+    <!-- Bouton de retour en haut à droite -->
+
+    <div class="details-container">
+        <div class="description-column">
+            <h4>Description</h4>
+            <p>
+                {% if opportunite[4].startswith('https://') %}
+                    <a href="{{ opportunite[4] }}" target="_blank">{{ opportunite[4] }}</a>
+                {% else %}
+                    {{ opportunite[4] }}
+                {% endif %}
+            </p> <!-- Description -->
+        </div>
+        <div class="info-column">
+            <h4>Détails</h4>
+            <p><strong>Pays :</strong> {{ opportunite[1] }}</p> <!-- Pays -->
+            <p><strong>Type :</strong> {{ opportunite[3] }}</p> <!-- Type -->
+            <p><strong>Niveau :</strong> {{ opportunite[5] }}</p> <!-- Niveau -->
+            <p><strong>Date Limite :</strong> {{ opportunite[7] }}</p> <!-- Date Limite -->
+            <p><strong>Nombre de bourses :</strong> {{ opportunite[9] }}</p> <!-- Nombre de bourses -->
+            <p><strong>Domaine Concerné :</strong>
+                {% if opportunite[10].startswith('https://') %}
+                    <a href="{{ opportunite[10] }}" target="_blank">{{ opportunite[10] }}</a>
+                {% else %}
+                    {{ opportunite[10] }}
+                {% endif %}
+            </p> <!-- Domaine Concerné -->
+            <p><strong>Durée d'étude :</strong>
+                {% if opportunite[11].startswith('https://') %}
+                    <a href="{{ opportunite[11] }}" target="_blank">{{ opportunite[11] }}</a>
+                {% else %}
+                    {{ opportunite[11] }}
+                {% endif %}
+            </p> <!-- Durée d'étude -->
+            <p><strong>Pays éligibles :</strong>
+                {% if opportunite[12].startswith('https://') %}
+                    <a href="{{ opportunite[12] }}" target="_blank">{{ opportunite[12] }}</a>
+                {% else %}
+                    {{ opportunite[12] }}
+                {% endif %}
+            </p> <!-- Pays éligibles -->
+            <p><strong>Financement :</strong>
+                {% if opportunite[6].startswith('https://') %}
+                    <a href="{{ opportunite[6] }}" target="_blank">{{ opportunite[6] }}</a>
+                {% else %}
+                    {{ opportunite[6] }}
+                {% endif %}
+            </p> <!-- Financement -->
+            <p><strong>Conditions :</strong>
+                {% if opportunite[8] is iterable and not opportunite[8] is string %}
+                    {% set links = opportunite[8] %}
+                    {% for lien in links[:2] %}
+                        <a href="{{ lien }}" target="_blank">{{ lien }}</a><br>
+                    {% endfor %}
+                {% else %}
+                    <a href="{{ opportunite[8] }}" target="_blank">{{ opportunite[8] }}</a>
+                {% endif %}
+            </p> <!-- Conditions -->
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+<!-- Salutation personnalisée -->
+<a href="https://wa.me/22667489187" target="_blank" class="footer-link"><h1>SOME Fiarma Landry </h1> </a>
+
+</body>
+</html>
+
