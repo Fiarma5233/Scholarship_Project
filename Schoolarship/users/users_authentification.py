@@ -171,6 +171,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 SMTP_USERNAME = os.getenv("SMTP_USERNAME")  # Ton adresse Gmail
 SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")  # Ton mot de passe ou App Password
+URI_DIRECTION = os.getenv("URI_DIRECTION")
 
 def create_users_table():
     sql_file_path = './users/users_table.sql'
@@ -251,7 +252,7 @@ def login():
 
     request_uri = client.prepare_request_uri(
         authorization_endpoint,
-        redirect_uri="http://127.0.0.1:5000/login/callback",
+        redirect_uri=URI_DIRECTION,
         scope=["openid", "email", "profile"],
     )
     return redirect(request_uri)
