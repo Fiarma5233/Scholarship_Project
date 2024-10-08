@@ -162,3 +162,81 @@ LINE 1: UPDATE opportunities SET send = TRUE WHERE id IN (2, 13, 3, ...
 2024-10-02 16:14:04,059 - INFO - Connexion à la base de données pour mise à jour des opportunités.
 2024-10-02 16:14:04,067 - INFO - 101 opportunités marquées comme envoyées.
 2024-10-02 16:14:04,067 - INFO - Mise à jour des données terminée
+2024-10-08 13:02:26,608 - INFO - Début de la tâche
+2024-10-08 13:02:26,608 - INFO - Scraping des données...
+2024-10-08 13:02:26,609 - INFO - ====== WebDriver manager ======
+2024-10-08 13:02:26,751 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 13:02:26,865 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 13:02:26,962 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-08 13:02:43,297 - INFO - ====== WebDriver manager ======
+2024-10-08 13:02:43,448 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 13:02:43,577 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 13:02:43,703 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-08 13:02:49,219 - INFO - ====== WebDriver manager ======
+2024-10-08 13:02:49,302 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 13:02:49,439 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 13:02:49,615 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-08 13:02:54,975 - INFO - ====== WebDriver manager ======
+2024-10-08 13:02:55,059 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 13:02:55,163 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 13:02:55,267 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-08 13:03:00,662 - INFO - ====== WebDriver manager ======
+2024-10-08 13:03:00,752 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 13:03:00,878 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 13:03:00,993 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-08 13:05:58,215 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/9ab9fd0ed3e4fa1c1ea604622e1f8cbd
+2024-10-08 13:05:58,217 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7cc651cbb880>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/9ab9fd0ed3e4fa1c1ea604622e1f8cbd
+2024-10-08 13:05:58,217 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7cc651cbb610>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/9ab9fd0ed3e4fa1c1ea604622e1f8cbd
+2024-10-08 16:07:24,498 - INFO - Début de la tâche
+2024-10-08 16:07:24,499 - INFO - Scraping des données...
+2024-10-08 16:07:24,499 - INFO - ====== WebDriver manager ======
+2024-10-08 16:07:24,644 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:07:24,753 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:07:24,853 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-08 16:07:41,236 - INFO - ====== WebDriver manager ======
+2024-10-08 16:07:41,330 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:07:41,448 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:07:41,578 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-08 16:07:47,256 - INFO - ====== WebDriver manager ======
+2024-10-08 16:07:47,348 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:07:47,465 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:07:47,572 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-08 16:07:53,384 - INFO - ====== WebDriver manager ======
+2024-10-08 16:07:53,481 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:07:53,598 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:07:53,718 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-08 16:08:00,207 - INFO - ====== WebDriver manager ======
+2024-10-08 16:08:00,306 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:08:00,431 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:08:00,541 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-08 16:17:39,120 - INFO - ====== WebDriver manager ======
+2024-10-08 16:17:39,356 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:17:39,499 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:17:39,617 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-08 16:18:27,466 - INFO - ====== WebDriver manager ======
+2024-10-08 16:18:27,666 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:18:27,787 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:18:27,911 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-08 16:20:49,928 - INFO - ====== WebDriver manager ======
+2024-10-08 16:20:50,140 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:20:50,311 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:20:50,447 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-08 16:27:58,982 - INFO - ====== WebDriver manager ======
+2024-10-08 16:27:59,194 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:27:59,340 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:27:59,450 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-08 16:28:29,320 - INFO - ====== WebDriver manager ======
+2024-10-08 16:28:29,450 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:28:29,555 - INFO - Get LATEST chromedriver version for google-chrome
+2024-10-08 16:28:29,681 - INFO - Driver [/home/fiarma-landry-some/.wdm/drivers/chromedriver/linux64/129.0.6668.89/chromedriver-linux64/chromedriver] found in cache
+2024-10-08 16:31:07,481 - INFO - Tâche de Scraping des terminée.
+2024-10-08 16:31:07,483 - INFO - Insertion des données dans PostgreSQL...
+2024-10-08 16:31:07,911 - INFO - Tâche d'insertion des données dans PostgreSQL terminée.
+2024-10-08 16:31:07,911 - INFO - Récupération de nouvelles opportunités disponibles
+2024-10-08 16:31:07,942 - INFO - Connexion réussie à la base de données.
+2024-10-08 16:31:07,942 - INFO - Exécution de la requête pour récupérer les nouvelles opportunités...
+2024-10-08 16:31:07,944 - WARNING - Aucune nouvelle opportunité trouvée.
+2024-10-08 16:31:07,944 - INFO - Tâche de récupération des nouvelles opportunités terminée
+2024-10-08 16:31:07,944 - INFO - Récupération de tous les utilisateurs
+2024-10-08 16:31:07,981 - INFO - Tâche de récupération des utilisateurs terminée
+2024-10-08 16:31:07,981 - INFO - Aucune nouvelle opportunité à envoyer

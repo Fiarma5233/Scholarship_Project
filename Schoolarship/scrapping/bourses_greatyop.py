@@ -305,61 +305,61 @@ def extract_bourse_info_from_urls(urls):
 
 
 ####################################################
-url_bourses = 'https://greatyop.com/category/bourses/'
-# Appeler la fonction et stocker le nombre total de pages dans la variable 'total_pages_bourses'
-total_pages_bourses = get_total_pages(url_bourses)
+# url_bourses = 'https://greatyop.com/category/bourses/'
+# # Appeler la fonction et stocker le nombre total de pages dans la variable 'total_pages_bourses'
+# total_pages_bourses = get_total_pages(url_bourses)
 
 
 
 
-url_stages = 'https://greatyop.com/category/stages-emplois/'
+# url_stages = 'https://greatyop.com/category/stages-emplois/'
 
-# Appeler la fonction et stocker le nombre total de pages dans la variable 'total_pages_stages'
-total_pages_stages = get_total_pages(url_stages)
-
-
-url_formations = 'https://greatyop.com/category/formations/'
-# Appeler la fonction et stocker le nombre total de pages dans la variable 'total_pages_formations'
-total_pages_formations = get_total_pages(url_formations)
-
-####################### Appel de fonctions 
-
-urls_pages_bourses = generate_page_urls(url_bourses, total_pages_bourses)
+# # Appeler la fonction et stocker le nombre total de pages dans la variable 'total_pages_stages'
+# total_pages_stages = get_total_pages(url_stages)
 
 
-urls_pages_stages = generate_page_urls(url_stages, total_pages_stages)
+# url_formations = 'https://greatyop.com/category/formations/'
+# # Appeler la fonction et stocker le nombre total de pages dans la variable 'total_pages_formations'
+# total_pages_formations = get_total_pages(url_formations)
 
-urls_pages_formations = generate_page_urls(url_formations, total_pages_formations)
+# ####################### Appel de fonctions 
 
-#################################
-
-liens_bourses = extract_links_from_pages(urls_pages_bourses)
-
-liens_stages = extract_links_from_pages(urls_pages_stages)
-
-liens_formations = extract_links_from_pages(urls_pages_formations)
-
-#######################
-
-bourses = extract_bourse_info_from_urls(liens_bourses)
-
-df_bourses = pd.DataFrame(bourses)
-
-df_bourses.to_csv('bourses.csv')
-
-stages = extract_bourse_info_from_urls(liens_stages)
-
-df_stages = pd.DataFrame(stages)
-
-df_stages['Type'] = 'Stage'
-
-df_stages.to_csv('stages.csv')
+# urls_pages_bourses = generate_page_urls(url_bourses, total_pages_bourses)
 
 
-formations = extract_bourse_info_from_urls(liens_formations)
+# urls_pages_stages = generate_page_urls(url_stages, total_pages_stages)
 
-df_formations = pd.DataFrame(formations)
+# urls_pages_formations = generate_page_urls(url_formations, total_pages_formations)
 
-df_formations['Type'] = 'Formation'
+# #################################
 
-df_formations.to_csv('formations.csv')
+# liens_bourses = extract_links_from_pages(urls_pages_bourses)
+
+# liens_stages = extract_links_from_pages(urls_pages_stages)
+
+# liens_formations = extract_links_from_pages(urls_pages_formations)
+
+# #######################
+
+# bourses = extract_bourse_info_from_urls(liens_bourses)
+
+# df_bourses = pd.DataFrame(bourses)
+
+# df_bourses.to_csv('bourses.csv')
+
+# stages = extract_bourse_info_from_urls(liens_stages)
+
+# df_stages = pd.DataFrame(stages)
+
+# df_stages['Type'] = 'Stage'
+
+# df_stages.to_csv('stages.csv')
+
+
+# formations = extract_bourse_info_from_urls(liens_formations)
+
+# df_formations = pd.DataFrame(formations)
+
+# df_formations['Type'] = 'Formation'
+
+# df_formations.to_csv('formations.csv')
