@@ -6,7 +6,7 @@ from flask import Flask, render_template, request
 from dotenv import load_dotenv
 from users.users_authentification import auth_blueprint, create_users_table
 from databases.db import get_all_bourses, get_bourse_by_id  # Importer la fonction qui récupère les données de la base
-from utils.utils import install_python_dependencies, install_chrome_and_chromedriver
+from installations.dependancies import install_python_dependencies, install_chrome_and_chromedriver
 import datetime
 load_dotenv()  # Charge les variables d'environnement à partir du fichier .env
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'

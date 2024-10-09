@@ -1,5 +1,5 @@
 # Importer les fonctions nécessaires depuis utils/utils.py
-from utils.utils import     install_python_dependencies, install_chrome_and_chromedriver
+from installations.dependancies import     install_python_dependencies, install_chrome_and_chromedriver
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 import os
