@@ -123,4 +123,4 @@ def insert_data_to_postgres(csv_file, sql_create_table_file):
     print("Connexion fermée.")
 
 
-#insert_data_to_postgres('opportunities_etudes.csv', './databases/postgres_create_tables.sql')
+insert_data_to_postgres('opportunities_etudes.csv', './databases/postgres_create_tables.sql')

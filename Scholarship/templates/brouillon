@@ -1,6 +1,243 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% extends "base.html" %}
+
+<!-- Bloc pour les styles personnalisés -->
+{% block styles %}
+    <!-- Inclure le fichier CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detail.css') }}">
+{% endblock styles %}
+
+{% block content %}
+{% if section == "stages" %}
+    <h1>Détails du Stage</h1>
+{% elif section == "opportunites" %}
+    <h1>Détails de l'Opportunite</h1>
+{% else %}
+    <h1>Détails de la {{ section[:-1]|capitalize }}</h1>
+{% endif %}
+
+
+<div class="bourse-details">
+    <h2>{{ bourse[2] }}</h2> <!-- Titre -->
+
+    <!-- Bouton de retour en haut à droite -->
+    <a href="{{ url_for(section) }}" class="btn btn-secondary return-btn">Retour à {{ section|capitalize }}</a>
+
+    <div class="details-container">
+        <div class="description-column">
+            <h3>Description</h3>
+            <p>
+                {% if bourse[4].startswith('https://') %}
+                    <a href="{{ bourse[4] }}" target="_blank">{{ bourse[4] }}</a>
+                {% else %}
+                    {{ bourse[4] }}
+                {% endif %}
+            </p> <!-- Description -->
+        </div>
+        <div class="info-column">
+            <h3>Détails</h3>
+            <p><strong>Pays :</strong> {{ bourse[1] }}</p> <!-- Pays -->
+            <p><strong>Type :</strong> {{ bourse[3] }}</p> <!-- Type -->
+            <p><strong>Niveau :</strong> {{ bourse[5] }}</p> <!-- Niveau -->
+            
+
+            <p><strong>Date Limite :</strong> {{ bourse[7] }}</p> <!-- Date Limite -->
+
+            
+
+            <p><strong>Nombre de bourses :</strong> {{ bourse[9] }}</p> <!-- Nombre de bourses -->
+            
+            <p><strong>Domaine Concerné :</strong>
+                {% if bourse[10].startswith('https://') %}
+                    <a href="{{ bourse[10] }}" target="_blank">{{ bourse[10] }}</a>
+                {% else %}
+                    {{ bourse[10] }}
+                {% endif %}
+            </p> <!-- Domaine Concerné -->
+
+            <p><strong>Durée d'étude :</strong>
+                {% if bourse[11].startswith('https://') %}
+                    <a href="{{ bourse[11] }}" target="_blank">{{ bourse[11] }}</a>
+                {% else %}
+                    {{ bourse[11] }}
+                {% endif %}
+            </p> <!-- Durée d'étude -->
+
+            <p><strong>Pays éligibles :</strong>
+                {% if bourse[12].startswith('https://') %}
+                    <a href="{{ bourse[12] }}" target="_blank">{{ bourse[12] }}</a>
+                {% else %}
+                    {{ bourse[12] }}
+                {% endif %}
+            </p> <!-- Pays éligibles -->
+
+            <p><strong>Financement :</strong>
+                {% if bourse[6].startswith('https://') %}
+                    <a href="{{ bourse[6] }}" target="_blank">{{ bourse[6] }}</a>
+                {% else %}
+                    {{ bourse[6] }}
+                {% endif %}
+            </p> <!-- Financement -->
+
+            <p></p>
+                <strong>Conditions :</strong>
+                {% if bourse[8] is iterable and not bourse[8] is string %}
+                    {% set links = bourse[8] %}
+                    {% for lien in links[:2] %}
+                        <a href="{{ lien }}" target="_blank">{{ lien }}</a><br>
+                    {% endfor %}
+                {% else %}
+                    <a href="{{ bourse[8] }}" target="_blank">{{ bourse[8] }}</a>
+                {% endif %}
+            </p> <!-- Conditions -->
+
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+{% endblock content %}
+
+
+################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+################################
+.description-column {
+    flex: 1; /* Prend une partie égale de l'espace disponible */
+    padding-right: 20px; /* Espacement à droite */
+}
+
+.info-column {
+    flex: 1; /* Prend une partie égale de l'espace disponible */
+    padding-left: 20px; /* Espacement à gauche */
+}
+
+.return-btn {
+    position: absolute; /* Positionnement absolu */
+    top: 20px; /* Espacement du haut */
+    right: 20px; /* Espacement à droite */
+}
+
+.bourse-details p {
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    margin: 20px 20px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-secondary {
+    background: #6c757d;
+} */
+
+
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f4; */
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bourse-details {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Augmenter la largeur pour les colonnes */
+    margin: 0 auto;
+}
+
+.bourse-details h2 {
+    color: #333;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: row; /* Aligne les colonnes horizontalement */
+    justify-content: space-between; /* Espace entre les colonnes */
+    margin-top: 20px;
+}
+
+.description-column {
+    flex: 1; /* Prend une partie égale de l'espace disponible */
+    padding-right: 20px; /* Espacement à droite */
+}
+
+.info-column {
+    flex: 1; /* Prend une partie égale de l'espace disponible */
+    padding-left: 20px; /* Espacement à gauche */
+}
+
+.return-btn {
+    position: absolute; /* Positionnement absolu */
+    top: 20px; /* Espacement du haut */
+    right: 20px; /* Espacement à droite */
+}
+
+.bourse-details p {
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-secondary {
+    background: #6c757d;
+} 
+
+
+################################
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
